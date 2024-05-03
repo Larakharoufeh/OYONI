@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <title>OYONI</title>
+    <style>
+        h1 {
+            text-align: center; /* Center align the text */
+            font-size: 36px; /* Increase font size */
+        }
+        .container {
+            max-width: 800px; /* Set maximum width for content */
+            margin: 20 auto; /* Center content horizontally */
+            padding: 20px; /* Add some padding for better appearance */
+            text-align: center;
+        }
+        .button-container {
+            text-align: center; /* Center align the button */
+            margin-top: 20px; /* Add some space between the navigation and the button */
+        }
+        .link a {
+            text-decoration: none; /* Remove underline */
+            color: #888; /* Set link color to light grey */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+        /* Change link color on hover */
+        .link a:hover {
+            color: #fff;
+        }
+
+        #playButton {
+            margin-top: 20px;
+            margin-bottom: 20px; /* Add space between button and links */
+        }
+
+    </style>
+</head>
+<!-- Menu bar to be able to navigate throughout the website -->
+<body>
+    <div class="container">
+        <h1>OYONI</h1>
+        <div class="link">
+            <a href="index.html" class="text">Home</a>
+          </div>
+        <div class="link">
+            <a href="Read_Image.html" class="text">Describe Scene</a>
+          </div>
+          <div class="link">
+            <a href="Describe_People.html" class="text">Describe People</a>
+          </div>
+          <div class="link">
+            <a href="Read_Text.html" class="text">Read Text</a>
+          </div>
+          <div class="link">
+            <a href="Memories.html" class="text">Memories</a>
+          </div>
+    </div>
+
+    <div class="container">
+        <p>User: "Describe People"</p>
+    </div>
+    <!-- Button to save contact -->
+    <div class="button-container">
+        <button id="people">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <!-- Button to save contact -->
+    <div class="button-container">
+        <button id="save_contact">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <p>User: "Yes, save as Lina"</p>
+    </div>
+
+    <div class="button-container">
+        <button id="saved_contact">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <div class="button-container">
+        <button id="options_saved_contact">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <p>User: "Describe Another Person"</p>
+    </div>
+
+    <div class="button-container">
+        <button id="person_not_detected">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <p>User: "Try Again"</p>
+    </div>
+
+    <div class="button-container">
+        <button id="man">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <div class="button-container">
+        <button id="options_after_describe">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">OYONI's Response</span>
+        </button>
+    </div>
+
+    <script>
+        // Get the button element
+        var button = document.getElementById('people');
+
+        // Add event listener to the button
+        button.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/people.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        var button = document.getElementById('save_contact');
+
+        // Add event listener to the button
+        button.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/save_contact.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        var button2 = document.getElementById('saved_contact');
+
+        // Add event listener to the button
+        button2.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/contact_saved.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        var button3 = document.getElementById('options_saved_contact');
+
+        // Add event listener to the button
+        button3.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/optionsAfterSaved.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        
+        var button4 = document.getElementById('person_not_detected');
+
+        // Add event listener to the button
+        button4.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/errorHandleDescribe.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        var button5 = document.getElementById('man');
+
+        // Add event listener to the button
+        button5.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/man.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+        var button6 = document.getElementById('options_after_describe');
+
+        // Add event listener to the button
+        button6.addEventListener('click', function() {
+            // Create an audio element
+            var audio = new Audio('AudioFiles/optionsAfterSaved.mp3'); 
+            // Play the audio
+            audio.play();
+        });
+
+    </script>
+</body> 
+</html>
